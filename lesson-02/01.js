@@ -13,14 +13,11 @@ const isVerifiedUser = true
 const hasSpecialPermission = true
 const hasTemporaryPass = false
 
-let isAccess = false;
+const isAccess = (isAdmin || isVerifiedUser) && (hasSpecialPermission || hasTemporaryPass);
+if (isAccess) {
+    console.log ("Доступ к ресурсу получен")
+} else {
+    console.log("Не хватает специального разрешения или статус пользователя не соответствует уровню допуска")
+}
 
 // your code
-
-while (!isAccess) {
-    if (isAdmin || isVerifiedUser && hasSpecialPermission || hasTemporaryPass) {
-        isAccess = true;
-    } else {
-        console.log("Не хватает специального разрешения или статус пользователя не соответствует уровню допуска")
-    }
-}
