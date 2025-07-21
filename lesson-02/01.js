@@ -21,6 +21,6 @@ while (!isAccess) {
     if (isAdmin || isVerifiedUser && hasSpecialPermission || hasTemporaryPass) {
         isAccess = true;
     } else {
-        alert("Не хватает специального разрешения или статус пользователя не соответствует уровню допуска")
+        console.log("Не хватает специального разрешения или статус пользователя не соответствует уровню допуска")
     }
 }
