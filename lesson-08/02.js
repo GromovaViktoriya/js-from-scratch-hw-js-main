@@ -4,7 +4,9 @@
  */
 
 function isNumeric(str) {
-  // your code
+    numString = +str //+ превращает пробел в 0
+    if (str === " ") {return false}
+    return !isNaN(numString)
 }
 
 // console.log(isNumeric("123")) // Ожидаемый результат: true
