@@ -67,6 +67,7 @@ cancelButton.addEventListener('click', () => {
       countdownDisplay.textContent = 'Отменено'
       setTimeout(() => {
           countdownDisplay.textContent = ''
+          isTimerStarted = false
       }, 1000)
   }
 })
